@@ -1,0 +1,15 @@
+import matplotlib.pyplot as plt
+from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FiguraCanvas
+from matplotlib.backends.backend_qt5agg import NavigationToolbar2QT as BarraNavegacion
+
+
+        self.figure = plt.figure(figsize=(15, 5))
+        self.canvas = FiguraCanvas(self.figure)
+
+        self.ax = self.figure.add_subplot(111)
+        # para referir al mismo axes
+
+        self.toolbar = BarraNavegacion(self.canvas, self)
+
+        self.verticalLayout.addWidget(self.canvas)
+        self.verticalLayout.addWidget(self.toolbar)
