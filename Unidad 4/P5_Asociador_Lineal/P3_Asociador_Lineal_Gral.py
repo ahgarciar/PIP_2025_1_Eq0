@@ -45,8 +45,14 @@ print("Prueba...")
 
 casosCorrectos = 0
 
+#SE DECIDE PREVIAMENTE: ....
+# 0 0 1  - BUENO
+# 0 1 0  - MALO
+# 1 0 0  - REGULAR
+
 #CLASE SALIDA1  SALIDA 2  SALIDA 3
-Clases = ["MAGO", "DUELISTA", "GUERRERO"]
+Clases = ["REGULAR", "MALO", "BUENO"]
+
 
 for i in range(X.shape[1]): #para cada uno de los casos/registros de prueba
     print("Prueba del Caso ", i + 1)
@@ -81,9 +87,9 @@ print("Eficiencia del Asociador Lineal: ", casosCorrectos/X.shape[1]*100.0)
 #UTILIZACIÓN DEL ASOCIADOR LINEAL...
 print("\n\nPrueba de funcionamiento del asociador lineal: ")
 
-#0 0 1  = GUERRERO
+#0 0 1  = BUENO
 x = [78, 53, 11, 30, 86, 23]
-y = "GUERRERO"
+y = "BUENO"
 
 x = n.array(x)
 Ycasox = W.dot(x)

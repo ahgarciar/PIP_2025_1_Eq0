@@ -39,7 +39,7 @@ print("Pseudoinversa de X: ")
 print(Xpseudo)
 
 print("COMPROBACIÓN:")
-C = Xpseudo.dot(X)
+C = Xpseudo.dot(X) ## Xinv*X
 print(C)
 
 
